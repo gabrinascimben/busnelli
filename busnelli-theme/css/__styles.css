@@ -1,0 +1,42 @@
+/** Utility classes */
+/********************/
+
+/* WP always adds explicit height and width attributed to IMG tags, to sometimes we need this */
+.h-auto {
+	height: auto;
+}
+.h-full {
+	height: 100%;
+}
+
+/* Set some links or other elements to block appearance */
+.block {
+	display: block;
+}
+
+
+
+/** Helpers **/
+/*************/
+
+/* ACF WYSIWYG text editor wraps text inside <p> tags
+in the Description section of the Product tech sheet the <p> tag was adding an unwanted margin */
+.descrizione .row > div p:last-child {
+	margin-bottom: 0;
+}
+/* Sometimes it doesn't stay on top... */
+.background-white {
+	position: relative;
+}
+
+/* Empty accordion in product tech sheed */
+.accordion--empty {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid rgba(27, 27, 26, 0.5);
+    border-bottom: 1px solid rgba(27, 27, 26, 0.5);
+    font-size: 20px;
+    text-transform: uppercase;
+}

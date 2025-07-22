@@ -1,0 +1,25 @@
+<svg id="Componente_22_1" data-name="Componente 22 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="89.5" height="111.08" viewBox="0 0 89.5 111.08">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rettangolo_1034" data-name="Rettangolo 1034" width="89.5" height="111.08" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rettangolo_1059" data-name="Rettangolo 1059" width="23.403" height="10.376" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Raggruppa_10709" data-name="Raggruppa 10709" transform="translate(0 0)">
+    <g id="Raggruppa_10707" data-name="Raggruppa 10707" transform="translate(0 0)" clip-path="url(#clip-path)">
+      <path id="Tracciato_11513" data-name="Tracciato 11513" d="M65.385.5H.5V110.2H88.616V23.641Z" transform="translate(0.192 0.193)" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Tracciato_11514" data-name="Tracciato 11514" d="M70.6,23.7H47.4V.5" transform="translate(18.234 0.193)" fill="none" stroke="#161615" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+  <g id="Raggruppa_10800" data-name="Raggruppa 10800" transform="translate(33 81.524)">
+    <path id="Tracciato_11563" data-name="Tracciato 11563" d="M0,0V10.376H1.312V6.2H5.28V4.943H1.312V1.251H5.584V0Z" transform="translate(0 -0.001)"/>
+    <g id="Raggruppa_10799" data-name="Raggruppa 10799" transform="translate(0 0)">
+      <g id="Raggruppa_10798" data-name="Raggruppa 10798" clip-path="url(#clip-path-2)">
+        <path id="Tracciato_11564" data-name="Tracciato 11564" d="M5.977,0H9.059c1.755,0,3.1,1.037,3.1,2.685a2.4,2.4,0,0,1-1.466,2.336,2.589,2.589,0,0,1,1.8,2.532c0,1.786-1.435,2.823-3.3,2.823H5.977ZM9.043,1.251H7.289V4.425H9.043A1.559,1.559,0,0,0,10.8,2.837,1.559,1.559,0,0,0,9.043,1.251M9.2,5.661H7.289V9.125H9.2a1.694,1.694,0,0,0,1.923-1.71A1.727,1.727,0,0,0,9.2,5.661" transform="translate(1.628 0)"/>
+        <path id="Tracciato_11565" data-name="Tracciato 11565" d="M13.24,10.376H11.652l3.388-5.311L11.806,0h1.587l2.549,4.043L18.489,0h1.588L16.841,5.065l3.388,5.311H18.657L15.942,6.088Z" transform="translate(3.174 0)"/>
+      </g>
+    </g>
+  </g>
+</svg>

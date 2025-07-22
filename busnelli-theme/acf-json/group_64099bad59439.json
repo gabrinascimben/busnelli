@@ -1,0 +1,55 @@
+{
+    "key": "group_64099bad59439",
+    "title": "Mosaico",
+    "fields": [
+        {
+            "key": "field_64099badf292b",
+            "label": "Mosaico",
+            "name": "mosaic",
+            "aria-label": "",
+            "type": "gallery",
+            "instructions": "Dimensioni consigliate: 300 x 400 px<br>\r\nL'altezza può anche essere variabile.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "return_format": "id",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "insert": "append",
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "mosaic"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfml_field_group_mode": "advanced",
+    "modified": 1679994821
+}

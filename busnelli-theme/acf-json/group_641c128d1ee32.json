@@ -1,0 +1,47 @@
+{
+    "key": "group_641c128d1ee32",
+    "title": "Classe Custom",
+    "fields": [
+        {
+            "key": "field_641c128de7fdc",
+            "label": "Class CSS custom per la pagina",
+            "name": "custom_class",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Non modificare questo valore!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfml_field_group_mode": "advanced",
+    "modified": 1679994850
+}
