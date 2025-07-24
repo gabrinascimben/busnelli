@@ -12,7 +12,7 @@ function websolute_starter_theme_scripts() {
 
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap', [], WS_THEME_VERSION );
 	wp_enqueue_style( 'vendor', WS_THEME_URI . '/css/vendors.min.css', [], WS_THEME_VERSION );
-	wp_enqueue_style( 'main', WS_THEME_URI . '/css/main.min.css', ['vendor'], WS_THEME_VERSION );
+	wp_enqueue_style( 'main', WS_THEME_URI . '/css/_main.css', ['vendor'], WS_THEME_VERSION );
 	wp_enqueue_style( 'theme', WS_THEME_URI . '/css/styles.css', ['main'], WS_THEME_VERSION );
 
 	wp_enqueue_script( 'polyfill', 'https://polyfill.io/v3/polyfill.min.js?features=es5%2CArray.prototype.find%2CObject.assign', [], WS_THEME_VERSION, true );
