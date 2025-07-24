@@ -6119,7 +6119,7 @@ button[disabled],
 }
 .menu--wrapper {
   display: none;
-  background-color: #000000;
+  background-color: #a48067;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -6145,9 +6145,10 @@ button[disabled],
   justify-content: flex-start;
   padding-top: 15vh;
   height: 100%;
-  color: #FFFFFF;
+  color: #f5f4ef;
   position: relative;
   z-index: 20;
+  margin-top: 1rem;
 }
 .menu--content > *:not(:last-child) {
   margin-bottom: 36px;
@@ -6163,7 +6164,7 @@ button[disabled],
   }
 }
 .menu--primary--item:hover .menu--primary--item--title {
-  color: #D50037;
+  color: #3d291f;
 }
 .menu--primary--item--title {
   font-family: "Niveau Grotesk Black";
@@ -6195,7 +6196,7 @@ button[disabled],
   text-decoration-color: currentColor;
 }
 .menu--secondary--item:hover {
-  color: #D50037;
+  color: #3d291f;
 }
 .menu--secondary--item:not(:last-child) {
   margin-bottom: 8px;
@@ -6325,6 +6326,9 @@ html.menu-open .header {
   border: 0;
   margin: 0;
   display: block;
+}
+.icon--social:hover svg path {
+    fill: #3d291f !important;
 }
 .icon svg:last-child, .icon--search svg:last-child, .icon--arrow-prev svg:last-child, .icon--arrow-next svg:last-child, .icon--arrow-prev-nocircle svg:last-child, .icon--arrow-next-nocircle svg:last-child, .icon--more svg:last-child, .icon--social svg:last-child {
   position: absolute;
@@ -7863,7 +7867,7 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
 * Footer
 */
 .footer {
-  background: #000000;
+  background: #8a5c3c;
   color: #FFFFFF;
   padding-bottom: 0 !important;
   position: relative;
@@ -7919,11 +7923,11 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
   width: 100%;
 }
 .footer--links--title:hover {
-  color: #D50037;
+  color: #b89b7a;
 }
 .footer--links > * {
-  border-top: 1px solid #555353;
-  border-bottom: 1px solid #555353;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   margin: 0 10px;
   margin-bottom: 30px;
   padding: 8px 0;
@@ -7952,7 +7956,7 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
 }
 .footer--links [data-toggle]:after, .footer--links [data-toggle]:before {
   content: "";
-  color: #D50037;
+  color: #b89b7a;
   font-family: "Niveau Grotesk Bold";
   position: absolute;
   right: 10px;
