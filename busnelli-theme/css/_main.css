@@ -319,8 +319,10 @@ u {
   text-underline-position: from-font;
   text-decoration-color: currentColor;
   font-size: 20px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   line-height: 1.2;
+  color: #8a5c3b;
+  font-weight: 400;
 }
 @media (min-width: 1024px) {
   .txt-underline-uppercase {
@@ -6595,7 +6597,7 @@ html.menu-open .header {
   cursor: pointer;
 }
 .timeline--navigation--slide:hover .timeline--navigation--name:before {
-  border-color: #D50037;
+  border-color: #8a5c3c;
   width: 42px;
   height: 42px;
 }
@@ -8341,6 +8343,11 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
   left: 85%;
   display: none;
 }
+
+.homepage--text-image--vertical div {
+    color: #b89b7a;
+}
+
 .homepage--text-image--vertical > * {
   transform-origin: left center;
   transform: rotate(-90deg) translateX(-50%) translateY(75%);
@@ -10637,7 +10644,7 @@ body.loading {
   transition: all 0.2s ease-in-out;
 }
 .text-image--text a:hover, .brand-platform--text-image--text a:hover {
-  color: #D50037;
+  color: #b89b7a;
 }
 .text-image--image {
   display: inline-block;
@@ -10918,4 +10925,8 @@ body.loading {
 }
 .half-image-and-text.dark {
   color: #FFFFFF;
+}
+
+.st--wrapper.st--line {
+	color: #8a5c3c;
 }
