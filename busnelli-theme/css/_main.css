@@ -6078,7 +6078,15 @@ button[disabled],
 .cta.dark .cta--wrapper {
   border-color: #FFFFFF;
 }
-
+body.menu-open .menu--icon:before, body.menu-open .menu--icon:after {
+    background: #fff !important;
+}
+.search--toggle .menu--icon {
+	background-color: #8a5c3c !important;
+}
+.search--toggle .menu--icon:before, .search--toggle  .menu--icon:after {
+	background-color: #fff !important;
+}
 .menu {
   position: relative;
   z-index: 200 !important;
@@ -6270,6 +6278,8 @@ html.menu-open .header {
   text-decoration-color: currentColor;
   text-align: right;
   width: 24px;
+  text-decoration: none;
+  color: #000;
 }
 .dropdown--active:after {
   content: "";
@@ -7761,22 +7771,31 @@ textarea:focus {
   }
 }
 
+a.header--left--logo svg path {
+    fill: #3e3e3e !important;
+}
+
+.icon--search svg path {
+    fill: #8a5c3b;
+}
+
 .header {
   left: 0;
   width: 100vw;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
+  background-color: #fff;
 }
 .header .menu--icon {
-  background: #FFFFFF;
+  background: #8a5c3b;
 }
 .header .menu--icon:not(.open):before, .header .menu--icon:not(.open):after {
-  background: #38FBD2;
+  background: #fff;
 }
 .header .dropdown {
   color: #FFFFFF;
 }
 .header .dropdown--active:after, .header .dropdown:hover .dropdown--active:after {
-  border-top-color: #38FBD2 !important;
+  border-top-color: #8a5c3b !important;
 }
 .header--wrapper {
   display: flex;
@@ -7830,7 +7849,7 @@ textarea:focus {
 @media (min-width: 768px) {
   .header--language {
     visibility: unset;
-    margin-right: 50px;
+    margin-right: 25px;
   }
 }
 .header--search {
@@ -7839,7 +7858,7 @@ textarea:focus {
 }
 @media (min-width: 768px) {
   .header--search {
-    margin-right: 100px;
+    margin-right: 25px;
     width: 24px;
   }
 }
