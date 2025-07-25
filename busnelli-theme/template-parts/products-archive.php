@@ -104,11 +104,11 @@ if ($filter) {
 						&& get_field('filter_excerpt', $filter_obj->ID ) != ''
 					)
 				) : ?>
-				<div class="section--hero--plus--icon">
+				<!-- <div class="section--hero--plus--icon">
 					<div class="icon--more">
 						<?php websolute_svg('more') ?>
 					</div>
-				</div>
+				</div> -->
 			<?php endif; ?>
 		</div>
 	</div>

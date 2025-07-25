@@ -271,8 +271,8 @@ u {
 }
 
 .color-red {
-  color: #D50037 !important;
-  text-decoration-color: #D50037 !important;
+  color: #8a5c3c !important;
+  text-decoration-color: #8a5c3c !important;
 }
 
 .color-grey {
@@ -285,7 +285,7 @@ u {
 }
 
 .background-oil {
-  background-color: #000000 !important;
+  background-color: #3d291f !important;
 }
 
 .background-white {
@@ -449,6 +449,10 @@ button[disabled],
   .container, .modal--content, .half-image--container, .page--storia .section-6 .bottom, .designer--hero--top, .homepage--hero--cta {
     max-width: 1440px;
   }
+}
+
+.container-fluid p {
+    color: #8a5c3c;
 }
 
 .container-fluid, .swiper--default--nav, .page--storia .section-6 .bottom-left, .designer--hero--quote, .header--container, .storia--floating,
@@ -5976,6 +5980,7 @@ button[disabled],
   align-items: flex-start;
   justify-content: flex-start;
   text-transform: uppercase;
+  text-decoration: none;
 }
 @media (min-width: 1024px) {
   .section--hero--plus--content, .collection--hero--content {
@@ -6390,6 +6395,10 @@ html.menu-open .header {
 .dark .icon--arrow-prev-nocircle svg:last-child path,
 .dark .icon--arrow-next-nocircle svg:last-child path {
   stroke: #D50037;
+}
+
+section.text-only.background-white.normal.text-center.section-7 p {
+    color: #8a5c3c !important;
 }
 
 .slider-side .container, .slider-side .modal--content, .slider-side .half-image--container, .slider-side .page--storia .section-6 .bottom, .page--storia .section-6 .slider-side .bottom, .slider-side .designer--hero--top, .slider-side .homepage--hero--cta {
@@ -8474,7 +8483,7 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
 }
 @media (min-width: 1024px) {
   .collection--products--item {
-    margin-bottom: 140px;
+    margin-bottom: 70px;
   }
 }
 .collection--products--image {
@@ -8755,7 +8764,7 @@ html.filters-open .collection--filters:after {
 
 .crew--half {
   position: relative;
-  background: #000000;
+  background: #3D291F;
   color: #FFFFFF;
 }
 .crew--half--item {
@@ -8813,6 +8822,9 @@ html.filters-open .collection--filters:after {
   .crew--half--top {
     margin-bottom: 35px;
   }
+}
+.crew--half--content p {
+	color: #fff;
 }
 .crew--half--title, .crew--half--content {
   max-width: 80%;
@@ -8947,7 +8959,7 @@ html.filters-open .collection--filters:after {
 .crew--designers--single {
   width: 100%;
   aspect-ratio: 1/1;
-  background: #D50037;
+  background: #ddd9ce;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
@@ -9260,7 +9272,7 @@ html.filters-open .collection--filters:after {
   padding-bottom: 0 !important;
 }
 .brand-platform--hero .container, .brand-platform--hero .modal--content, .brand-platform--hero .half-image--container, .brand-platform--hero .page--storia .section-6 .bottom, .page--storia .section-6 .brand-platform--hero .bottom, .brand-platform--hero .homepage--hero--cta, .brand-platform--hero .designer--hero--top {
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   position: relative;
   z-index: 2;
 }
@@ -9269,14 +9281,14 @@ html.filters-open .collection--filters:after {
   text-align: left;
   position: relative;
   z-index: 2;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 .brand-platform--hero--title * {
-  color: #FFFFFF !important;
+  color: #8a5c3c !important;
 }
 .brand-platform--hero--title *.color-red,
 .brand-platform--hero--title *.color-red * {
-  color: #38FBD2 !important;
+  color: #8a5c3c !important;
 }
 .brand-platform--hero--title .st--line {
   margin-top: -10%;
@@ -9766,9 +9778,9 @@ html.filters-open .collection--filters:after {
   text-align: center;
   font-family: "Niveau Grotesk Regular", "sans-serif";
   text-decoration-line: underline;
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: 3px;
   text-underline-position: from-font;
-  text-decoration-color: currentColor;
+  text-decoration-color: #8a5c3c;
   font-size: 20px;
   text-transform: uppercase;
   line-height: 1.2;
@@ -9797,6 +9809,9 @@ html.filters-open .collection--filters:after {
   .page--storia .text-only.section-3 {
     padding: 400px 0 200px 0;
   }
+}
+section.text-only.background-white.normal.text-left.section-4 p {
+	color: #8a5c3c;
 }
 .page--storia .section-6 {
   overflow: visible;
