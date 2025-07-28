@@ -6405,7 +6405,7 @@ html.menu-open .header {
 .dark .icon--arrow-next svg:last-child path,
 .dark .icon--arrow-prev-nocircle svg:last-child path,
 .dark .icon--arrow-next-nocircle svg:last-child path {
-  stroke: #D50037;
+  stroke: #8a5c3c;
 }
 
 section.text-only.background-white.normal.text-center.section-3,
@@ -9948,7 +9948,7 @@ section.text-only.background-white.normal.text-left.section-4 p {
   opacity: 1;
 }
 .page--storia .section-11 .mosaic--icon svg g {
-  stroke: #D50037 !important;
+  stroke: #8a5c3c !important;
   transition: all 0.2s ease-in-out;
 }
 .page--storia .section-11 .mosaic--item:hover svg g {
