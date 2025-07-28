@@ -6148,7 +6148,7 @@ body.menu-open .menu--icon:before, body.menu-open .menu--icon:after {
   z-index: 10;
   width: 80%;
   height: 100%;
-  margin-left: -20px;
+  margin-left: -30px;
   background-size: contain;
 }
 .menu--content {
@@ -6162,6 +6162,7 @@ body.menu-open .menu--icon:before, body.menu-open .menu--icon:after {
   position: relative;
   z-index: 20;
   margin-top: 1rem;
+  max-width: 2560px;
 }
 .menu--content > *:not(:last-child) {
   margin-bottom: 36px;
@@ -6407,8 +6408,16 @@ html.menu-open .header {
   stroke: #D50037;
 }
 
-section.text-only.background-white.normal.text-center.section-7 p {
-    color: #8a5c3c !important;
+section.text-only.background-white.normal.text-center.section-3,
+section.text-only.background-white.normal.text-center.section-7 p,
+section.text-only.background-white.normal.text-center.section-10,
+section.text-image.background-white.section-19 .text-only {
+    color: #895c3d;
+}
+
+section.text-only.background-oil.normal.text-center.section-4,
+section.text-only.background-oil.normal.text-center.section-10 {
+    text-decoration-color: #fff;
 }
 
 .slider-side .container, .slider-side .modal--content, .slider-side .half-image--container, .slider-side .page--storia .section-6 .bottom, .page--storia .section-6 .slider-side .bottom, .slider-side .designer--hero--top, .slider-side .homepage--hero--cta {
@@ -7832,7 +7841,7 @@ a.header--left--logo svg path {
   padding-left: 0 !important;
 }
 .header--left--breadcrumb:active, .header--left--breadcrumb > :active, .header--left--breadcrumb:visited, .header--left--breadcrumb > :visited {
-  color: #FFFFFF;
+  color: #000;
 }
 .header--left--breadcrumb a:hover,
 .header--left--breadcrumb a:focus {
