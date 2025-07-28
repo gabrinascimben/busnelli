@@ -36,35 +36,8 @@ allModalCloses.forEach(close => {
 });
 
 
-// Controllo integrato per header - scroll e menu
-let isMenuOpen = false;
-let isHeaderVisible = true;
-let lastScrollY = window.scrollY;
 
-// Funzione principale per aggiornare l'header
-function updateHeader() {
-  const header = document.querySelector('.header');
-  if (!header) return;
-
-  // Se il menu è aperto, l'header deve essere sempre visibile con background trasparente
-  if (isMenuOpen) {
-    header.style.transform = 'translate(0px, 0%)';
-    header.style.background = 'transparent';
-    isHeaderVisible = true;
-  } else {
-    // Se il menu è chiuso, applica la logica di scroll normale
-    header.style.background = '#fff';
-
-    // Mantieni la posizione attuale dell'header basata sullo scroll
-    if (window.scrollY <= 0) {
-      header.style.transform = 'translate(0px, 0%)';
-      isHeaderVisible = true;
-    }
-    // Non modificare la posizione se stiamo scrollando - lascia che handleScroll se ne occupi
-  }
-}
-
-// Gestione del menu wrapper
+// Semplice controllo del background header quando il menu è aperto
 function toggleHeaderBackground() {
   const menuWrapper = document.querySelector('.menu--wrapper');
   const header = document.querySelector('.header');
@@ -75,80 +48,49 @@ function toggleHeaderBackground() {
   }
 
   const menuWrapperStyle = window.getComputedStyle(menuWrapper);
-  const wasMenuOpen = isMenuOpen;
-  isMenuOpen = menuWrapperStyle.display === 'block';
 
-  // Solo se lo stato del menu è cambiato
-  if (wasMenuOpen !== isMenuOpen) {
-    if (isMenuOpen) {
-      // Menu aperto - elementi bianchi
-      const logoSvgPaths = document.querySelectorAll('a.header--left--logo svg path');
-      logoSvgPaths.forEach(path => {
-        path.style.setProperty('fill', '#fff', 'important');
-      });
+  // Controlla se il menu wrapper è in display: block
+  if (menuWrapperStyle.display === 'block') {
+    // Menu aperto - background trasparente e elementi bianchi
+    header.style.background = 'transparent';
 
-      const menuIcons = document.querySelectorAll('.header .menu--icon');
-      menuIcons.forEach(icon => {
-        icon.style.setProperty('background', '#fff', 'important');
-      });
+    // Cambia il colore del logo SVG a bianco
+    const logoSvgPaths = document.querySelectorAll('a.header--left--logo svg path');
+    logoSvgPaths.forEach(path => {
+      path.style.setProperty('fill', '#fff', 'important');
+    });
 
-      addMenuIconStyles();
-    } else {
-      // Menu chiuso - ripristina colori originali
-      const logoSvgPaths = document.querySelectorAll('a.header--left--logo svg path');
-      logoSvgPaths.forEach(path => {
-        path.style.removeProperty('fill');
-      });
+    // Cambia il colore dell'icona menu a bianco
+    const menuIcons = document.querySelectorAll('.header .menu--icon');
+    menuIcons.forEach(icon => {
+      icon.style.setProperty('background', '#fff', 'important');
+    });
 
-      const menuIcons = document.querySelectorAll('.header .menu--icon');
-      menuIcons.forEach(icon => {
-        icon.style.removeProperty('background');
-      });
+    // Aggiungi CSS dinamico per gli pseudo-elementi
+    addMenuIconStyles();
 
-      removeMenuIconStyles();
-    }
+  } else {
+    // Menu chiuso - ripristina background bianco e colori originali
+    header.style.background = '#fff';
 
-    // Aggiorna l'header con la nuova configurazione
-    updateHeader();
+    // Rimuovi il colore forzato del logo SVG
+    const logoSvgPaths = document.querySelectorAll('a.header--left--logo svg path');
+    logoSvgPaths.forEach(path => {
+      path.style.removeProperty('fill');
+    });
+
+    // Rimuovi il colore forzato dell'icona menu
+    const menuIcons = document.querySelectorAll('.header .menu--icon');
+    menuIcons.forEach(icon => {
+      icon.style.removeProperty('background');
+    });
+
+    // Rimuovi CSS dinamico per gli pseudo-elementi
+    removeMenuIconStyles();
   }
 }
 
-// Gestione dello scroll
-function handleScroll() {
-  // Se il menu è aperto, non gestire lo scroll
-  if (isMenuOpen) return;
-
-  const currentScrollY = window.scrollY;
-  const header = document.querySelector('.header');
-  if (!header) return;
-
-  // Se siamo in cima alla pagina, mostra sempre l'header
-  if (currentScrollY <= 0) {
-    header.style.transform = 'translate(0px, 0%)';
-    isHeaderVisible = true;
-    lastScrollY = currentScrollY;
-    return;
-  }
-
-  // Scroll verso il basso - nascondi header
-  if (currentScrollY > lastScrollY && currentScrollY > 100) {
-    if (isHeaderVisible) {
-      header.style.transform = 'translate(0px, -100%)';
-      isHeaderVisible = false;
-    }
-  }
-  // Scroll verso l'alto - mostra header
-  else if (currentScrollY < lastScrollY) {
-    if (!isHeaderVisible) {
-      header.style.transform = 'translate(0px, 0%)';
-      isHeaderVisible = true;
-    }
-  }
-
-  lastScrollY = currentScrollY;
-}
-
-// Funzioni helper per gli stili del menu
+// Funzione per aggiungere gli stili degli pseudo-elementi
 function addMenuIconStyles() {
   if (!document.getElementById('dynamic-menu-styles')) {
     const style = document.createElement('style');
@@ -163,6 +105,7 @@ function addMenuIconStyles() {
   }
 }
 
+// Funzione per rimuovere gli stili degli pseudo-elementi
 function removeMenuIconStyles() {
   const dynamicStyles = document.getElementById('dynamic-menu-styles');
   if (dynamicStyles) {
@@ -170,14 +113,16 @@ function removeMenuIconStyles() {
   }
 }
 
-// Observer per il menu
+// Observer per il menu - SOLO per osservare i cambiamenti del menu
 function observeMenuChanges() {
   const menuWrapper = document.querySelector('.menu--wrapper');
+
   if (!menuWrapper) {
     console.warn('Elemento .menu--wrapper non trovato');
     return;
   }
 
+  // Observer che osserva SOLO i cambiamenti del menu
   const observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
       if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
@@ -195,61 +140,7 @@ function observeMenuChanges() {
   toggleHeaderBackground();
 }
 
-// Throttle per ottimizzare le performance
-function throttle(func, limit) {
-  let inThrottle;
-  return function() {
-    const args = arguments;
-    const context = this;
-    if (!inThrottle) {
-      func.apply(context, args);
-      inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
-    }
-  }
-}
-
-// Inizializzazione
-function initIntegratedHeaderControl() {
-  const header = document.querySelector('.header');
-  if (!header) {
-    console.warn('Elemento .header non trovato');
-    return;
-  }
-
-  // Imposta stili di transizione
-  header.style.transition = 'transform 0.3s ease-in-out, background 0.3s ease-in-out';
-
-  // Assicurati che l'header sia visibile al caricamento
-  header.style.transform = 'translate(0px, 0%)';
-  header.style.background = '#fff';
-
-  // Avvia observer per menu
-  observeMenuChanges();
-
-  // Aggiungi listener per scroll con throttling
-  const throttledScroll = throttle(handleScroll, 16);
-  window.addEventListener('scroll', throttledScroll);
-
-  return {
-    destroy: () => {
-      window.removeEventListener('scroll', throttledScroll);
-    }
-  };
-}
-
-// Avvia quando il DOM è pronto
+// Inizializza SOLO l'observer del menu
 document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(() => {
-    window.integratedHeaderControl = initIntegratedHeaderControl();
-  }, 100);
-});
-
-// Assicurati che l'header sia visibile al caricamento completo
-window.addEventListener('load', function() {
-  const header = document.querySelector('.header');
-  if (header && window.scrollY === 0 && !isMenuOpen) {
-    header.style.transform = 'translate(0px, 0%)';
-    header.style.background = '#fff';
-  }
+  observeMenuChanges();
 });
