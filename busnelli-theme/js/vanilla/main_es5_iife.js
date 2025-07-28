@@ -15040,7 +15040,7 @@ function Header (delay) {
           } else {
             if ($(window).scrollTop() < 10) show_header.play();
           }
-        } else {
+        } else if (self.scroll() > 10) {
           show_header.reverse();
         }
       }
