@@ -14685,6 +14685,54 @@ function Fade (delay) {
       speed: 1000,
       breakpoints: breakpoints
     });
+    function updateTimelineCTA(slider) {
+      setTimeout(function() {
+        var navSlides = slider.el.querySelectorAll('.timeline--navigation--slide');
+
+        // Rimuovi tutti i CTA esistenti
+        navSlides.forEach(function(slide) {
+          var cta = slide.querySelector('.cta');
+          if (cta) {
+            slide.removeChild(cta);
+          }
+        });
+
+        // Aggiungi il CTA solo alla slide attiva, se ha un link
+        var activeSlide = slider.slides[slider.activeIndex];
+
+        // Controlla che la slide attiva esista prima di continuare
+        if (!activeSlide) {
+          return;
+        }
+
+        var url = activeSlide.getAttribute('data-link-url');
+        var title = activeSlide.getAttribute('data-link-title');
+        var target = activeSlide.getAttribute('data-link-target');
+
+        if (url && title) {
+          var ctaDiv = document.createElement('div');
+          ctaDiv.className = 'cta';
+
+          var ctaWrapperDiv = document.createElement('div');
+          ctaWrapperDiv.className = 'cta--wrapper';
+
+          var ctaContentDiv = document.createElement('div');
+          ctaContentDiv.className = 'cta--content';
+
+          var link = document.createElement('a');
+          link.href = url;
+          link.textContent = title;
+          link.target = target;
+
+          ctaContentDiv.appendChild(link);
+          ctaWrapperDiv.appendChild(ctaContentDiv);
+          ctaDiv.appendChild(ctaWrapperDiv);
+
+          activeSlide.appendChild(ctaDiv);
+        }
+      }, 0);
+    }
+
     var timeline_navigation = new Swiper('.timeline-' + index + ' .timeline--navigation--slides', {
       slidesPerView: "auto",
       centeredSlides: true,
@@ -14696,7 +14744,15 @@ function Fade (delay) {
       slidePrevClass: 'timeline--navigation--slide--prev',
       slideVisibleClass: 'timeline--navigation--slide--visible',
       slideActiveClass: 'timeline--navigation--slide--active',
-      speed: 1000
+      speed: 1000,
+      on: {
+        init: function (slider) {
+          updateTimelineCTA(slider);
+        },
+        slideChange: function (slider) {
+          updateTimelineCTA(slider);
+        }
+      }
     });
     timeline_navigation.on('slideChange', function (slider) {
       timeline_slides.slideTo(slider.activeIndex);

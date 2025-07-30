@@ -69,35 +69,24 @@ if (get_sub_field('slides') || get_sub_field('products') ) : ?>
 						$count++;
 
 						$link = get_sub_field('link');
-						if( $link ) :
+						$data_attributes = '';
+						if ($link) {
 							$link_url = $link['url'];
 							$link_title = $link['title'];
 							$link_target = $link['target'] ? $link['target'] : '_self';
-							if ($link_title != '') : ?>
-								<div class="timeline--navigation--slide">
-									<div class="timeline--navigation--name"></div>
-									<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
-										<div class="cta ">
-											<div class="cta--wrapper">
-												<div class="cta--content">
-													<?php echo $link_title; ?>
-												</div>
-											</div>
-										</div>
-									</a>
-								</div>
-							<?php endif; ?>
-						<?php else : ?>
-							<div class="timeline--navigation--slide">
-								<div class="timeline--navigation--name">
-									<?php if (get_sub_field('title') ) :
-										the_sub_field('title');
-									else :
-										echo $count;
-									endif; ?>
-								</div>
+							$data_attributes = 'data-link-url="' . esc_url($link_url) . '" data-link-title="' . esc_attr($link_title) . '" data-link-target="' . esc_attr($link_target) . '"';
+						}
+						?>
+						<div class="timeline--navigation--slide" <?php echo $data_attributes; ?>>
+							<div class="timeline--navigation--name">
+								<?php if (get_sub_field('title') ) :
+									the_sub_field('title');
+								else :
+									echo 'Slide ' . $count;
+								endif; ?>
 							</div>
-						<?php endif; ?>
+						</div>
+						
 					<?php endwhile;
 				elseif (get_sub_field('content') == 'hero') :
 					foreach ( get_sub_field('products') as $product ) : ?>
