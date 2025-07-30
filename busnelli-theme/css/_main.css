@@ -8373,6 +8373,7 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
     margin-top: 200px;
   }
 }
+
 .homepage--text-image--vertical {
   font-family: "Niveau Grotesk Black";
   font-size: 40px;
@@ -8431,7 +8432,7 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
   text-transform: uppercase;
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 90%;
   margin: 0 0 0 0;
   transform-origin: center center;
   transform: translateY(-50%);

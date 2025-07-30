@@ -109,7 +109,7 @@ if (get_sub_field('slides') || get_sub_field('products') ) : ?>
 								?>">
 								<div class="cta ">
 									<div class="cta--wrapper">
-										<div class="cta--content"><?php _e('Discover More', 'busnelli') ?></div>
+										<div class="cta--content"><?php _e('Scopri di più', 'busnelli') ?></div>
 									</div>
 								</div>
 							</a>
