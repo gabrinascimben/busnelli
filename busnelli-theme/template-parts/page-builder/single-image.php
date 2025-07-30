@@ -5,7 +5,11 @@
 		$image = get_sub_field('image');
 		if ( $image ) :
 			echo wp_get_attachment_image( $image, 'full' );
-		endif; ?>
+		endif;
+		$description = get_sub_field('descrizione_img');
+		if ( $description ) : ?>
+			<div class="single-image--description"><?php echo esc_html( $description ); ?></div>
+		<?php endif; ?>
 	</div>
 	<?php
 	if ( $link ) :

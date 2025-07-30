@@ -827,6 +827,26 @@
                             "max_size": "",
                             "mime_types": "",
                             "preview_size": "medium"
+                        },{
+                            "key": "field_6409bXXXfXXXX",  
+                            "label": "Descrizione immagine",
+                            "name": "descrizione_img",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Inserisci una descrizione per l'immagine (opzionale)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "br"
                         },
                         {
                             "key": "field_6409b81cf367f",

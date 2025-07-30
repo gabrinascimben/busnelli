@@ -10235,6 +10235,42 @@ body.loading {
   }
 }
 
+section.single-image.light.default-center.p-default.square {
+  display: block;
+}
+
+.single-image--wrapper {
+  position: relative;
+}
+
+.single-image--description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+  pointer-events: none;
+  font-size: 40px;
+  width: 75%;
+  line-height: 1.2;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+@media screen and (max-width:767px) {
+  .single-image--description {
+    font-size: 20px;
+    width: 100%;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+}
+
 .single-image {
   display: flex;
   align-items: center;
