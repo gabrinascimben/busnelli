@@ -24,6 +24,33 @@ else $layout_class = 'section--text';
 
 			<?php the_sub_field('text') ?>
 
+			<?php 
+			$text_description = get_sub_field('text_description');
+			$image_id = get_sub_field('image_block');
+			if ($text_description || $image_id) : 
+			?>
+				<div class="description-image-container">
+					<?php if ($text_description) : ?>
+						<div class="text-description">
+							<?php echo $text_description; ?>
+						</div>
+					<?php endif; ?>
+			
+					<?php if ($image_id) : ?>
+						<div class="image-block">
+							<?php echo wp_get_attachment_image($image_id, 'full'); ?>
+						</div>
+					<?php endif; ?>
+				</div>
+			<?php endif; ?>
+
+			<?php if ($subdescription = get_sub_field('subdescription')) : ?>
+				<div class="subdescription">
+					<?php echo nl2br($subdescription); ?>
+				</div>
+			<?php endif; ?>
+
+
 	<?php if ($layout == 'section-3' || $layout == 'section-4' || $layout == 'section-7' || $layout == 'section-10') : ?>
 		</div>
 	<?php else : ?>

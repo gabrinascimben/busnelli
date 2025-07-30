@@ -1074,7 +1074,73 @@
                             "toolbar": "very_simple",
                             "media_upload": 0,
                             "delay": 0
-                        }
+                        },
+                        {
+                            "key": "field_64xxxxxxxtextdesc",
+                            "label": "Testo - In stampatello",
+                            "name": "text_description",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "br"
+                          },
+                          {
+                            "key": "field_64xxxxxxximage",
+                            "label": "Immagine associata",
+                            "name": "image_block",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "medium"
+                          },
+                          {
+                            "key": "field_64xxxxxxxtitle2",
+                            "label": "Testo",
+                            "name": "subdescription",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                            },
+                            "wpml_cf_preferences": 1,
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": ""
+                          }
                     ],
                     "min": "",
                     "max": ""
