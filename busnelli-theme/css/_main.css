@@ -6604,7 +6604,6 @@ section.text-only.background-oil.normal.text-center.section-10 {
 .timeline--navigation:after {
   content: "";
   color: #FFFFFF;
-  background: #1B1B1A;
   border-radius: 40px;
   display: inline-block;
   position: absolute;
