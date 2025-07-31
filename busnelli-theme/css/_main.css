@@ -6412,7 +6412,7 @@ html.menu-open .header {
   transition: all 0.2s ease-in-out;
 }
 .icon--download:hover svg path:last-child {
-  stroke: #D50037;
+  stroke: #8a5c3c;
 }
 .icon--filtri svg g {
   mix-blend-mode: normal !important;
@@ -6963,6 +6963,12 @@ section.section--embed.dark.light .controls  {
   margin-bottom: 36px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+}
+.tabs--heading:nth-child(2) {
+  text-align: end;
+}
+.tabs--heading:nth-child(3) {
+  display: none !important;
 }
 .tabs--heading.active, .tabs--heading:hover {
   text-decoration-line: underline;
