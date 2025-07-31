@@ -10,7 +10,7 @@ $args = array(
 );
 $designers = new WP_Query( $args );
 if ( $designers->have_posts() ) : ?>
-	<section class="crew--designers" fade up>
+	<section id="crew_designers" class="crew--designers" fade up>
 		<div class="container">
 			<div class="crew--designers--slider">
 				<div class="swiper-wrapper">

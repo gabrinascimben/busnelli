@@ -6013,10 +6013,6 @@ button[disabled],
   }
 }
 .section--hero--plus--content .full, .collection--hero--content .full {
-  text-decoration-line: underline;
-  text-decoration-thickness: 1px;
-  text-underline-position: from-font;
-  text-decoration-color: currentColor;
   height: 0;
   overflow: hidden;
   /*
@@ -6360,6 +6356,11 @@ html.menu-open .header {
   border-top-color: #FFFFFF;
 }
 
+.icon--arrow-next:hover svg path,
+.icon--arrow-prev:hover svg path {
+  fill: #8a5c3c !important;
+}
+
 .icon, .icon--search, .icon--arrow-prev, .icon--arrow-next, .icon--arrow-prev-nocircle, .icon--arrow-next-nocircle, .icon--more, .icon--social {
   display: inline-block;
   cursor: pointer;
@@ -6674,7 +6675,7 @@ section.text-only.background-oil.normal.text-center.section-10 {
   left: 0;
 }
 .timeline--navigation--slide--active .timeline--navigation--name {
-  color: #FFFFFF;
+  color: #000;
 }
 .timeline--navigation--slide--active .timeline--navigation--name:before, .timeline--navigation--slide--active .timeline--navigation--name:after {
   opacity: 0 !important;
@@ -6851,7 +6852,8 @@ section.text-only.background-oil.normal.text-center.section-10 {
   display: flex;
   flex-direction: column;
 }
-.designer--hero--backdrop .controls {
+.designer--hero--backdrop .controls,
+section.section--embed.dark.light .controls  {
   display: none !important;
 }
 .designer--name {
@@ -8533,8 +8535,8 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
   top: 0;
 }
 
-.collection--hero {
-  padding-top: 70px !important;
+section.collection--hero {
+  padding-top: 5rem !important;
 }
 @media (min-width: 1024px) {
   .collection--hero {
@@ -8866,6 +8868,9 @@ html.filters-open .collection--filters:after {
 .crew--half--item.visible:after, .crew--half--item.visible:before {
   width: 100%;
 }
+.crew--half--item.visible {
+  padding-bottom: 2rem;
+}
 .crew--half--item:first-child {
   padding-top: 140px;
 }
@@ -9084,6 +9089,9 @@ html.filters-open .collection--filters:after {
   text-align: center;
   display: flex;
   flex-direction: column;
+}
+section.designer--hero {
+  padding-top: 5rem !important;
 }
 @media (min-width: 768px) {
   .designer--hero {

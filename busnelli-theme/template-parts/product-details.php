@@ -13,9 +13,9 @@
 			<div class="tabs--content" tabs-content="2">
 				<?php get_template_part('template-parts/product-details', 'downloads'); ?>
 			</div>
-			<div class="tabs--content" tabs-content="3">
+			<!-- <div class="tabs--content" tabs-content="3">
 				<?php get_template_part('template-parts/product-details', 'certifications'); ?>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </section>
