@@ -8031,8 +8031,19 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
 }
 @media (min-width: 1024px) {
   .footer--links {
-    display: flex;
+    display: grid;
     align-items: flex-start;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .footer--links {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .footer--social {
+    display: none
   }
 }
 .footer--ctas {
