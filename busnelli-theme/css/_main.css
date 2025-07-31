@@ -8255,23 +8255,28 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
   position: relative;
 }
 .homepage--timeless--vertical {
-  font-family: "Niveau Grotesk Black";
+  font-family: "Niveau Grotesk Regular";
   font-size: 40px;
   text-align: center;
   margin-bottom: 20px;
-  text-transform: uppercase;
+  text-transform: none;
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 0;
   margin: 0 0 0 0;
   transform-origin: center center;
   transform: translateY(-50%);
-  mix-blend-mode: difference;
   left: 20px;
+  text-decoration: underline;
+  text-decoration-color: #8a5c3c;
+  text-decoration-thickness: 2px;
+}
+.homepage--timeless--vertical div {
+  color: #8a5c3c !important;
 }
 .homepage--timeless--vertical > * {
   transform-origin: left center;
-  transform: rotate(-90deg) translateX(-50%) translateY(75%);
+  transform: none;
   white-space: nowrap;
   line-height: 1;
 }
@@ -8282,7 +8287,7 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
 }
 @media (min-width: 1440px) {
   .homepage--timeless--vertical {
-    font-size: 80px;
+    font-size: 60px;
   }
 }
 .homepage--timeless--vertical * {
