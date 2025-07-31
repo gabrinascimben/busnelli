@@ -41,6 +41,7 @@ allModalCloses.forEach(close => {
 function toggleHeaderBackground() {
   const menuWrapper = document.querySelector('.menu--wrapper');
   const header = document.querySelector('.header');
+  const breadcrumb = document.querySelector('.header--left--breadcrumb');
 
   if (!menuWrapper || !header) {
     console.warn('Elementi .menu--wrapper o .header non trovati');
@@ -53,6 +54,11 @@ function toggleHeaderBackground() {
   if (menuWrapperStyle.display === 'block') {
     // Menu aperto - background trasparente e elementi bianchi
     header.style.background = 'transparent';
+
+    // Nascondi il breadcrumb
+    if (breadcrumb) {
+      breadcrumb.style.display = 'none';
+    }
 
     // Cambia il colore del logo SVG a bianco
     const logoSvgPaths = document.querySelectorAll('a.header--left--logo svg path');
@@ -72,6 +78,11 @@ function toggleHeaderBackground() {
   } else {
     // Menu chiuso - ripristina background bianco e colori originali
     header.style.background = '#fff';
+
+    // Mostra di nuovo il breadcrumb
+    if (breadcrumb) {
+      breadcrumb.style.display = '';
+    }
 
     // Rimuovi il colore forzato del logo SVG
     const logoSvgPaths = document.querySelectorAll('a.header--left--logo svg path');

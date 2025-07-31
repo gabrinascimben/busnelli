@@ -6763,6 +6763,11 @@ section.text-only.background-oil.normal.text-center.section-10 {
     font-size: 80px;
   }
 }
+@media screen and (max-width:767px) {
+  .timeline--vertical {
+    left: -10px;
+  }
+}
 .timeline--vertical * {
   color: #FFFFFF;
 }
@@ -7870,9 +7875,9 @@ a.header--left--logo svg path {
 .header--left--breadcrumb:active, .header--left--breadcrumb > :active, .header--left--breadcrumb:visited, .header--left--breadcrumb > :visited {
   color: #000;
 }
-.header--left--breadcrumb a:hover,
+.header--left--breadcrumb a:hover, 
 .header--left--breadcrumb a:focus {
-  color: #D50037;
+  color: #8a5c3c;
 }
 @media (min-width: 768px) {
   .header--left--breadcrumb, .header--left--breadcrumb > * {
@@ -8409,7 +8414,7 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
 }
 @media (min-width: 1024px) {
   .homepage--text-image {
-    margin-top: 200px;
+    margin-top: 0;
   }
 }
 
@@ -8420,7 +8425,7 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
   margin-bottom: 20px;
   text-transform: uppercase;
   position: absolute;
-  top: 50%;
+  top: 90%;
   left: 0;
   margin: 0 0 0 0;
   transform-origin: center center;
@@ -8451,7 +8456,7 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
 }
 @media (min-width: 1024px) {
   .homepage--text-image--vertical {
-    left: 90%;
+    left: 96%;
     display: block;
   }
 }
@@ -8475,6 +8480,11 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
   margin: 0 0 0 0;
   transform-origin: center center;
   transform: translateY(-50%);
+}
+@media screen and (max-width:767px) {
+  .homepage--parallax--vertical {
+    left: 80%;
+  }
 }
 .homepage--parallax--vertical > * {
   transform-origin: left center;
@@ -10600,6 +10610,11 @@ section.single-image.light.default-center.p-default.square {
   font-size: 16px !important;
   text-transform: none;
 }
+@media screen and (max-width:767px) {
+  .subdescription {
+    margin-top: 17rem;
+  }
+}
 .text-description p {
   font-size: 40px !important;
   font-family: "Niveau Grotesk Regular", "sans-serif";
@@ -10632,6 +10647,12 @@ section.single-image.light.default-center.p-default.square {
   width: 100%;
   height: 100%;
   z-index: 3;
+}
+
+@media screen and (max-width:767px) {
+  .description-image-container .image-block {
+    top: 110%;
+  }
 }
 
 .description-image-container .image-block img {
@@ -10893,7 +10914,7 @@ section.single-image.light.default-center.p-default.square {
     margin: 0 auto;
 }
 section.homepage--text-image.background-white {
-  margin: 50px auto;
+  margin: 50px auto 150px auto;
 }
   .text-image--text_ {
     width: 40%;
