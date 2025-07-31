@@ -6195,6 +6195,10 @@ body.menu-open .menu--icon:before, body.menu-open .menu--icon:after {
   transition: all 0.2s ease-in-out;
   margin-bottom: 8px;
 }
+/* CALEIDOSCOPIO */
+.menu--primary--item:nth-child(4) {
+  display: none;
+}
 @media (min-width: 768px) {
   .menu--primary--item--title {
     font-size: 65px;

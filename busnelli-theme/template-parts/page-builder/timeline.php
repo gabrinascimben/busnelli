@@ -38,11 +38,6 @@ if (get_sub_field('slides') || get_sub_field('products') ) : ?>
 										</div>
 									<?php endif; ?>
 									<div class="hero-block--side">
-										<div class="hero-block--description">
-											<?php if ( get_field('designer', $product ) != '' ) :
-												the_field('quote', get_field('designer', $product ));
-											endif; ?>
-										</div>
 										<div class="hero-block--designer">
 											<?php
 											if ( get_field('designer', $product ) != '' ) :
