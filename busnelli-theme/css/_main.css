@@ -5951,12 +5951,31 @@ button[disabled],
   text-align: center;
   text-transform: uppercase;
 }
+
+.container-fluid .crew--hero--title {
+  font-size: 160px;
+}
+
+@media screen and (max-width: 1024px) {
+  .container-fluid .crew--hero--title {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container-fluid .crew--hero--title {
+    font-size: 64px;
+  }
+}
+
 @media (min-width: 768px) {
   .section--hero--title, .hero-block--title, .composizione--hero--title, .caleidoscopio--hero--title, .storia--hero--title,
   .crew--hero--title,
   .articolo--hero--title {
     font-size: 64px;
   }
+
+
 }
 @media (min-width: 1024px) {
   .section--hero--title, .hero-block--title, .composizione--hero--title, .caleidoscopio--hero--title, .storia--hero--title,
@@ -7289,13 +7308,13 @@ section.text-only.background-oil.normal.text-center.section-10 {
 .crew--hero,
 .articolo--hero {
   min-height: 100vh;
-  padding-top: 30px !important;
+  padding-top: 90px !important;
 }
 @media (max-width: 1023.98px) {
   .storia--hero,
   .crew--hero,
   .articolo--hero {
-    margin-top: 70px;
+    padding-top: 90px;
   }
 }
 .storia--hero--top,
@@ -8160,7 +8179,7 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
 */
 @media (min-width: 768px) {
   main {
-    padding: 80px 0;
+    /* padding: 80px 0; */
     min-height: calc(100vh - 62px);
   }
 }
