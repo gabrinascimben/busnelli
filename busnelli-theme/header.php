@@ -86,7 +86,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <div class="preloader">
-	<img src="<?php echo get_stylesheet_directory_uri() ?>/images/preloader.gif" />
+	<img src="<?php echo get_stylesheet_directory_uri() ?>/images/preloader_brown.gif" />
 </div>
 
 
