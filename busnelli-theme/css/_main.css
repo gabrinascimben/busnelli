@@ -323,7 +323,6 @@ u {
   text-underline-position: from-font;
   text-decoration-color: currentColor;
   font-size: 20px;
-  text-transform: capitalize;
   line-height: 1.2;
   color: #8a5c3b;
   font-weight: 400;
@@ -10849,7 +10848,7 @@ section.single-image.light.default-center.p-default.square {
     width: 40%;
     padding: 0;
     margin: 0;
-    transform: translateY(-100%);
+    transform: translateY(-50%);
     padding-top: 10%;
   }
   .text-image--text:nth-child(even), .brand-platform--text-image--text:nth-child(even) {
@@ -10858,6 +10857,27 @@ section.single-image.light.default-center.p-default.square {
     margin: 0;
     transform: translateX(-25%);
     margin-top: 30px;
+  }
+  .homepage--text-image .container {
+    height: 350px;
+    margin: 0 auto;
+}
+section.homepage--text-image.background-white {
+  margin: 50px auto;
+}
+  .text-image--text_ {
+    width: 40%;
+    padding: 0;
+    margin: 0;
+    transform: translate(-65%, 90%);
+  }
+  .text-image--text p {
+    padding-left: 2rem;
+  }
+  @media screen and (max-width:767px) {
+    .text-image--text p {
+      padding-left: 0;
+    }
   }
   .text-image--image {
     position: relative;
