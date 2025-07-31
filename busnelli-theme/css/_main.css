@@ -6674,6 +6674,9 @@ section.text-only.background-oil.normal.text-center.section-10 {
 .timeline--navigation--slide:before {
   left: 0;
 }
+.home .timeline--navigation--slide--active .timeline--navigation--name {
+  color: #fff;
+}
 .timeline--navigation--slide--active .timeline--navigation--name {
   color: #000;
 }
@@ -10405,7 +10408,8 @@ section.single-image.light.default-center.p-default.square {
 }
 @media (min-width: 1024px) {
   .single-image {
-    padding: 60px 0;
+    padding: 0 0 60px 0;
+    margin-top: -1px;
   }
 }
 
@@ -11169,4 +11173,8 @@ section.homepage--text-image.background-white {
 
 .blog main.page {
   background-color: #fff !important;
+}
+
+.designer-template-default section.text-only.background-white.normal.text-center.section-3 p {
+  color: #000;
 }
