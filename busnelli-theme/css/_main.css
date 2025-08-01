@@ -7993,7 +7993,7 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
   flex-wrap: wrap;
 }
 .footer--links--item:hover {
-  color: #D50037;
+  color: #b89b7a;
 }
 .footer--links--title {
   transition: all 0.2s ease-in-out;
