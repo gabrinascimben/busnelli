@@ -154,4 +154,43 @@ function observeMenuChanges() {
 // Inizializza SOLO l'observer del menu
 document.addEventListener('DOMContentLoaded', function() {
   observeMenuChanges();
+  handleStickyCrew();
 });
+
+function handleStickyCrew() {
+  const crewHalf = document.querySelector('.crew--half');
+  const crewFloating = document.querySelector('.crew--floating');
+
+  if (!crewHalf || !crewFloating) {
+    return; // Esce se gli elementi non esistono
+  }
+
+  const headerHeight = 150; // Altezza approssimativa dell'header, da aggiustare se necessario
+
+  window.addEventListener('scroll', function() {
+    if (window.innerWidth < 1024) {
+      // Disattiva tutto su mobile
+      crewFloating.classList.remove('is-sticky', 'is-at-bottom');
+      return;
+    }
+
+    const crewHalfRect = crewHalf.getBoundingClientRect();
+    const floatingHeight = crewFloating.offsetHeight;
+
+    // L'elemento diventa fisso quando la parte superiore del suo contenitore raggiunge l'header
+    if (crewHalfRect.top <= headerHeight && crewHalfRect.bottom > (headerHeight + floatingHeight)) {
+      crewFloating.classList.add('is-sticky');
+      crewFloating.classList.remove('is-at-bottom');
+    } 
+    // L'elemento si ferma e torna assoluto quando la fine del contenitore raggiunge il fondo dell'elemento fisso
+    else if (crewHalfRect.bottom <= (headerHeight + floatingHeight)) {
+      crewFloating.classList.remove('is-sticky');
+      crewFloating.classList.add('is-at-bottom');
+    } 
+    // In tutti gli altri casi, l'elemento torna alla sua posizione normale
+    else {
+      crewFloating.classList.remove('is-sticky');
+      crewFloating.classList.remove('is-at-bottom');
+    }
+  });
+}

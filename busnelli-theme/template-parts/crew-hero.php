@@ -22,22 +22,24 @@
 		</div>
 	<?php endif; ?>
 </section>
-<?php if ( get_field('floating_text') != '' ) : ?>
-	<div class="crew--floating" fade left>
-		<div class="row">
-			<div class="col-12 col-sm-8 col-md-6 col-xl-4">
-				<h2><?php the_field('floating_text') ?></h2>
-			</div>
-		</div>
-	</div>
-<?php endif; ?>
+
 
 <?php if( have_rows('steps') ) : ?>
 	<section class="crew--half">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-12 col-md-6 offset-md-6">
-
+				<div class="col-md-6">
+					<?php if ( get_field('floating_text') != '' ) : ?>
+						<div class="crew--floating" fade left>
+							<div class="row">
+								<div class="col-12 col-sm-8 col-md-6 col-xl-4">
+									<h2><?php the_field('floating_text') ?></h2>
+								</div>
+							</div>
+						</div>
+					<?php endif; ?>
+				</div>
+				<div class="col-md-6">
     				<?php
 					$count = 0;
 					while( have_rows('steps') ) : the_row();
