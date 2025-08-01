@@ -161,7 +161,7 @@ else $layout_class = $layout . '--';
 			<?php endif; ?>
 
 			<?php if (get_sub_field('text_2') != '' || get_sub_field('cta')) : ?>
-				<div class="text-image--text_">
+				<div class="text-image--text">
 					<div fade up>
 						<?php the_sub_field('text_2'); ?>
 					</div>

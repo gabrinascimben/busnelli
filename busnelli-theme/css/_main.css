@@ -10847,6 +10847,11 @@ section.single-image.light.default-center.p-default.square {
 .text-image--text:nth-child(2), .brand-platform--text-image--text:nth-child(2) {
   padding-left: 20%;
 }
+@media (max-width: 768px) {
+  .text-image--text:nth-child(2), .brand-platform--text-image--text:nth-child(2) {
+    padding-left: 0;
+  }
+}
 .text-image--text a, .brand-platform--text-image--text a {
   text-decoration-line: underline;
   text-decoration-thickness: 1px;
@@ -10919,6 +10924,23 @@ section.single-image.light.default-center.p-default.square {
     margin: 0;
     transform: translateY(-50%);
     padding-top: 10%;
+  }
+  .homepage--text-image .text-image--text:nth-child(even) {
+    transform: translate(-50%, 90%);
+  }
+  /* STORIA - AZIENDA */
+  .page-id-16 .text-image--text:nth-child(odd),
+  .page-id-4487 .text-image--text:nth-child(odd){
+    transform: translateY(-90%);
+  }
+  .page-id-16 .text-image--text:nth-child(even),
+  .page-id-4487 .text-image--text:nth-child(even) {
+    transform: translate(-25%, 30%);
+  }
+  @media screen and (max-width:767px) {
+    body .text-image--text:nth-child(2) {
+      padding-left: 0 !important;
+    }
   }
   .text-image--text:nth-child(even), .brand-platform--text-image--text:nth-child(even) {
     width: 40%;
