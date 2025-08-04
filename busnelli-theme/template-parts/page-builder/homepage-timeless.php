@@ -1,7 +1,7 @@
 <section class="homepage--timeless">
 	<div class="row">
-		<div class="col-12 col-md-6">
-			<div class="homepage--timeless--image">
+		<div class="col-12 col-md-6 order-2 order-md-1">
+			<div class="homepage--timeless--image" fade left>
 				<?php
 				$image = get_sub_field('image');
 				if ( $image ) : ?>
@@ -25,7 +25,7 @@
 		</div>
 
 
-		<div class="col-10 offset-2 col-md-6 offset-md-0" fade right>
+		<div class="col-12 col-md-6 offset-md-0 order-1 order-md-2" fade right>
 			<div class="homepage--timeless--content">
 				<div class="container-fluid">
 					<?php if ( get_sub_field('text')  != '' ) : ?>
@@ -52,12 +52,13 @@
 					endif; ?>
 
 				</div>
+				<?php if ( get_sub_field('vertical')  != '' ) : ?>
+					<div class="homepage--timeless--vertical" fade up fire>
+						<div><?php the_sub_field('vertical') ?></div>
+					</div>
+				<?php endif; ?>
 			</div>
 		</div>
-		<?php if ( get_sub_field('vertical')  != '' ) : ?>
-			<div class="homepage--timeless--vertical" fade up fire>
-				<div><?php the_sub_field('vertical') ?></div>
-			</div>
-		<?php endif; ?>
+		
 	</div>
 </section>

@@ -2018,7 +2018,7 @@
                             "aria-label": "",
                             "type": "image",
                             "instructions": "Deve avere stessa forma e dimensioni del file PNG caricato sopra.",
-                            "required": 1,
+                            "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",

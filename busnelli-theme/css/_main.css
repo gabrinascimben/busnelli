@@ -8340,6 +8340,30 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
   text-decoration-color: #8a5c3c;
   text-decoration-thickness: 2px;
 }
+@media screen and (max-width:820px) {
+  .homepage--timeless {
+    padding: 0 !important;
+    position: relative;
+  }
+  .homepage--timeless--content {
+    max-width: 100% !important;
+  }
+  .homepage--timeless--content .container-fluid {
+    padding-top: 6rem;
+  }
+  .offset-2 {
+    margin-left: 2%;
+  }
+  .col-12.col-md-6.offset-md-0.order-1.order-md-2 {
+    padding-top: 2rem;
+    margin-bottom: -4rem;
+  }
+}
+@media screen and (max-width:767px) {
+  .col-12.col-md-6.offset-md-0.order-1.order-md-2 {
+    margin-bottom: -2rem;
+}
+}
 .homepage--timeless--vertical div {
   color: #8a5c3c !important;
 }
@@ -8364,7 +8388,7 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
 }
 @media (min-width: 1024px) {
   .homepage--timeless--vertical {
-    left: 45.5%;
+    left: 0;
   }
 }
 .homepage--timeless--image {
@@ -8374,6 +8398,12 @@ body.menu-open .dropdown--active:after, body.menu-open .dropdown:hover .dropdown
   display: inline-block;
   max-width: 100%;
 }
+@media screen and (max-width:820px) {
+  .homepage--timeless--image {
+    bottom: -8px;
+  }
+}
+
 .homepage--timeless--image img {
   max-width: 100%;
   height: auto;
@@ -10472,6 +10502,11 @@ section.single-image.light.default-center.p-default.square {
     margin-top: -1px;
   }
 }
+@media screen and (max-width:820px) {
+  .single-image {
+    padding: 0;
+  }
+}
 
 .quote {
   text-align: center;
@@ -10986,7 +11021,7 @@ section.single-image.light.default-center.p-default.square {
     padding-top: 10%;
   }
   .homepage--text-image .text-image--text:nth-child(even) {
-    transform: translate(-50%, 75%);
+    transform: translate(-50%, 90%);
   }
   /* STORIA - AZIENDA */
   .page-id-16 .text-image--text:nth-child(odd),
