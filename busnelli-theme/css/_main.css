@@ -7350,10 +7350,15 @@ section.section--embed.dark.light .controls  {
   margin: 0 auto;
   mix-blend-mode: difference;
 }
+.crew--hero--top {
+  mix-blend-mode: multiply !important;
+}
 .storia--hero--title *,
-.crew--hero--title *,
 .articolo--hero--title * {
   color: #FFFFFF !important;
+}
+.crew--hero--title * {
+  color: #8a5c3c !important;
 }
 .storia--floating,
 .crew--floating,
@@ -7369,6 +7374,23 @@ section.section--embed.dark.light .controls  {
   text-align: left;
   color: #FFFFFF;
   position: relative;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.page-id-16 .storia--floating {
+  font-family: "Niveau Grotesk Regular", "sans-serif";
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-position: from-font;
+  text-decoration-color: currentColor;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+  color: #FFFFFF;
+  position: fixed;
+  mix-blend-mode: difference;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
