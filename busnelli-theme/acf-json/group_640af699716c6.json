@@ -63,6 +63,30 @@
             "ui": 1
         },
         {
+            "key": "field_66b21f3a9f3d8",
+            "label": "Media Hero",
+            "name": "hero_media_type",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "Scegli se usare un video o un'immagine per l'hero.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "choices": {
+                "video": "Video",
+                "image": "Immagine"
+            },
+            "default_value": "video",
+            "allow_null": 0,
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
             "key": "field_640af75f357c5",
             "label": "ID Video",
             "name": "id_video",
@@ -70,7 +94,15 @@
             "type": "text",
             "instructions": "ID video di Vimeo.<br>\r\nEs. per il video con url <code>https:\/\/vimeo.com\/183083214<\/code> l'ID è solamente la parte numerica <code>183083214<\/code>",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66b21f3a9f3d8",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -82,6 +114,40 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_66b21f7d9f3d9",
+            "label": "Immagine Hero",
+            "name": "hero_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Carica un'immagine per l'hero.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66b21f3a9f3d8",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         },
         {
             "key": "field_640af71d357c3",

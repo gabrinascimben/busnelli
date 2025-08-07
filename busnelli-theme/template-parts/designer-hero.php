@@ -1,3 +1,11 @@
+<style>
+	.designer--hero--backdrop img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+</style>
 <!-- HERO -->
 <section class="designer--hero">
 	<div class="designer--hero--top">
@@ -14,15 +22,24 @@
 			</div>
 		</div>
 	</div>
-	<?php if (get_field('id_video')) : ?>
+	<?php
+	$media_type = get_field('hero_media_type');
+	$id_video = get_field('id_video');
+	$hero_image = get_field('hero_image');
+
+	if ( $media_type == 'video' && $id_video ) : ?>
 		<div class="designer--hero--backdrop" fade up>
 			<section class="section--embed  dark" fade up>
 				<div class="container-fluid">
 					<div class="section--embed--iframe">
-						<iframe class="vimeo" src="https://player.vimeo.com/video/<?php the_field('id_video') ?>?background=1" frameborder="0" allow="autoplay" allowfullscreen playsinline muted></iframe>
+						<iframe class="vimeo" src="https://player.vimeo.com/video/<?php echo esc_attr($id_video); ?>?background=1" frameborder="0" allow="autoplay" allowfullscreen playsinline muted></iframe>
 					</div>
 				</div>
 			</section>
+		</div>
+	<?php elseif ( $media_type == 'image' && $hero_image ) : ?>
+		<div class="designer--hero--backdrop" fade up>
+			<img src="<?php echo esc_url($hero_image['url']); ?>" alt="<?php echo esc_attr($hero_image['alt']); ?>" />
 		</div>
 	<?php endif; ?>
 
