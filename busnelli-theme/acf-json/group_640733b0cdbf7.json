@@ -111,7 +111,7 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": "png",
+            "mime_types": "png, webp",
             "preview_size": "medium"
         },
         {

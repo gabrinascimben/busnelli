@@ -9304,7 +9304,7 @@ section.designer--hero {
     z-index: 1;
   }
   .designer--hero--top .designer--hero--name {
-    width: 1px;
+    width: 50%;
     transform: translateY(-50%);
   }
   .designer--hero--backdrop {
